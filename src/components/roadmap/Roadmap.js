@@ -34,13 +34,12 @@ function Roadmap() {
   const [currentPage, setCurrentPage] = React.useState(0);
 
   const onFlip = React.useCallback((e) => {
-    console.log("Current page: " + e.data);
     setCurrentPage(e.data);
   }, []);
 
   let bookCoverStyle = {};
   if (currentPage == 0) {
-    bookCoverStyle["transform"] = `translateX(-${23}%)`;
+    bookCoverStyle["transform"] = `translateX(-${25}%)`;
   }
 
   return (
