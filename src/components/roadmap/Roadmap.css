@@ -2,10 +2,6 @@
     padding: 5% 0;
 }
 
-#book-parent{
-    border: 1px solid red
-}
-
 .roadmapHeader{
     text-align: center;
 }
@@ -24,9 +20,9 @@
     margin-top: 5%;
     text-align: center;
     border-radius: 10px;
+    display: flex;
     justify-content: center;
     position: relative;
-    border: 1px solid blue
 }
 .roadmapParaContainer{
     position: relative;
