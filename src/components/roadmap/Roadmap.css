@@ -1,3 +1,4 @@
+
 #roadmap{
     padding: 5% 0;
 }
@@ -23,6 +24,9 @@
     display: flex;
     justify-content: center;
     position: relative;
+    align-items: center;
+    transform: translateX(0);
+    transition: transform ease 0.2s;
 }
 .roadmapParaContainer{
     position: relative;

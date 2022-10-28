@@ -25,9 +25,24 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
 }));
+
 function Roadmap() {
   const classes = useStyles();
   const book = React.useRef();
+  const bookParent = React.useRef();
+
+  const [currentPage, setCurrentPage] = React.useState(0);
+
+  const onFlip = React.useCallback((e) => {
+    console.log("Current page: " + e.data);
+    setCurrentPage(e.data);
+  }, []);
+
+  let bookCoverStyle = {};
+  if (currentPage == 0) {
+    bookCoverStyle["transform"] = `translateX(-${23}%)`;
+  }
+
   return (
     <>
       <div id="roadmap">
@@ -42,11 +57,15 @@ function Roadmap() {
               id="helloFliper"
               width={360}
               height={660}
+              maxHeight={660}
               className="roadmapPara"
               showCover={true}
               ref={book}
+              style={bookCoverStyle}
+              onFlip={onFlip}
             >
               {/*==================================================PAGE 1==========================================*/}
+
               <div className="roadmapPageOne2">
                 <div className="roadmapPageOneImg">
                   <img src="./Assets/pages2.jpg" />
