@@ -38,8 +38,12 @@ function Roadmap() {
   }, []);
 
   let bookCoverStyle = {};
+  console.log("currentPage ", currentPage);
   if (currentPage == 0) {
     bookCoverStyle["transform"] = `translateX(-${25}%)`;
+  }
+  if (currentPage == 13) {
+    bookCoverStyle["transform"] = `translateX(${25}%)`;
   }
 
   return (
